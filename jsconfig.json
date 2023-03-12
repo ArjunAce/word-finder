@@ -1,0 +1,12 @@
+{
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*", "src/components/*/index.js"],
+      "styles/*": ["src/styles/*"]
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import TitleBar from '../TitleBar';
-import MenuBar from '../MenuBar';
-import Separator from '../Separator';
+import TitleBar from 'components/TitleBar';
+import MenuBar from 'components/MenuBar';
+import Separator from 'components/Separator';
 import styles from "./styles.module.scss"
 
 const App = () => {
