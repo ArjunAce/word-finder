@@ -1,6 +1,7 @@
 import React from "react";
 import TitleBar from './TitleBar';
 import MenuBar from './MenuBar';
+import Separator from './Separator';
 import styles from "./../styles/app.module.scss"
 
 const App = () => {
@@ -10,6 +11,9 @@ const App = () => {
                 <div className={styles['container']}>
                     <TitleBar />
                     <MenuBar />
+                    <div className={styles['main-content']}>
+                        <Separator />
+                    </div>
                 </div>
             </div>
         </React.Fragment>
