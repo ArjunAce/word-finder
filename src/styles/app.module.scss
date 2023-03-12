@@ -1,0 +1,21 @@
+@import "fonts";
+@import "reset";
+
+* {
+  font-family: Abhaya Libre, fantasy;
+  font-size: 16px;
+}
+
+html {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.container {
+  background: #c0c0c0;
+  box-shadow: inset -1px -1px 0px #0a0a0a, inset 1px 1px 0px #ffffff, inset -2px -2px 0px #808080,
+    inset 2px 2px 0px #dfdfdf;
+  padding: 3px;
+  height: 100vh;
+}

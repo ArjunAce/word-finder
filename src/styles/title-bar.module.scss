@@ -1,0 +1,37 @@
+.title-bar-container {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 3px;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  font-family: "Abhaya Libre";
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom: 4px;
+
+  .title-bar-controls {
+    display: flex;
+
+    div {
+      width: 16px;
+      height: 14px;
+      display: flex;
+      background: #c0c0c0;
+      box-shadow: inset -1px -1px 0px #0a0a0a, inset 1px 1px 0px #ffffff, inset -2px -2px 0px #808080,
+        inset 2px 2px 0px #dfdfdf;
+      padding: 3px;
+      img {
+        width: 10px;
+        height: 8px;
+      }
+    }
+    div.minimize img {
+      margin-top: 6px;
+      width: 10px;
+      height: 2px;
+    }
+  }
+}
