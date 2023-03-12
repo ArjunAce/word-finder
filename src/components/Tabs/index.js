@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./styles.module.scss"
 
-function Tabs({ tabName = 'Gamer'}) {
+function Tabs({ tabName }) {
     return (
         <div className={styles['tab']}>{tabName}</div>
     )
