@@ -17,9 +17,11 @@ function PuzzleWrapper() {
                 <div className={styles['right-section']}>
                 </div>
             </div>
-            <div className={styles['footer']}>
+            <div className={styles['footer-wrapper']}>
+                <div className={styles['footer']}></div>
+                <div className={styles['footer']}></div>
+                <div className={styles['footer']}></div>
             </div>
-
         </div>
     )
 }
