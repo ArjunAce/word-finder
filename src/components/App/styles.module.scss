@@ -12,15 +12,18 @@ html {
     display: none;
   }
 }
+.app-wrapper,
+.container,
+.main-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .container {
   background: #c0c0c0;
-  box-shadow: inset -1px -1px 0px #0a0a0a, inset 1px 1px 0px #ffffff, inset -2px -2px 0px #808080,
-    inset 2px 2px 0px #dfdfdf;
   padding: 3px;
-  height: 100vh;
 
   .main-content {
-    height: 100%;
-    padding: 0 3px;
+    padding: 0 3px 3px;
   }
 }

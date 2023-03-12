@@ -9,7 +9,7 @@ import styles from "./styles.module.scss"
 const App = () => {
     return (
         <React.Fragment>
-            <div id="home">
+            <div id="home" className={styles['app-wrapper']}>
                 <div className={styles['container']}>
                     <TitleBar />
                     <MenuBar />

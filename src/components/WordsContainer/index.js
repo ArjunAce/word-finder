@@ -2,17 +2,15 @@ import React from 'react'
 import styles from "./styles.module.scss"
 import Button from "components/Button";
 import Separator from "components/Separator";
-import WordsContainer from "components/WordsContainer";
 
-function PuzzleWrapper() {
+function WordsContainer() {
     return (
-        <div className={styles['puzzle-wrapper']}>
+        <div className={styles['words-container']}>
             <div className={styles['main-section']}>
                 <div className={styles['left-section']}>
                     <Button label="Upload puzzle" />
                     <Separator />
                     <Button label="Upload words" />
-                    <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
                 </div>
@@ -24,4 +22,4 @@ function PuzzleWrapper() {
     )
 }
 
-export default PuzzleWrapper
+export default WordsContainer
