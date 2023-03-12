@@ -1,9 +1,9 @@
 // @ts-nocheck
 import React from 'react'
-import styles from './../styles/title-bar.module.scss';
-import minimize from "./../assets/images/minimize.png";
-import maximize from "./../assets/images/maximize.png";
-import close from "./../assets/images/close.png";
+import styles from "./styles.module.scss"
+import minimize from "../../assets/images/minimize.png";
+import maximize from "../../assets/images/maximize.png";
+import close from "../../assets/images/close.png";
 
 function TitleBar() {
     return (

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react'
-import styles from './../styles/menu-bar.module.scss';
+import styles from "./styles.module.scss"
 
 const menuBarItems = ['File', 'Edit', 'View', 'Go', 'Favorites', 'Help'];
 
