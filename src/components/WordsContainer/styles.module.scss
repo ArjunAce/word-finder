@@ -3,7 +3,21 @@
   height: 100%;
   background: #ffffff;
   box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #0a0a0a, inset -2px -2px 0px #dfdfdf;
-  padding: 9px 9px 0px;
+  padding: 9px 8px 0px;
+  color: #222222;
+
+  .title {
+    font-family: "Abhaya Libre";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 11px;
+    margin-bottom: 8px;
+  }
+  .word {
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 5px;
+  }
 
   .scroll-wrapper {
     width: 16px;
