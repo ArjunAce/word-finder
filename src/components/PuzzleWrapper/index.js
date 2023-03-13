@@ -5,6 +5,9 @@ import Separator from "components/Separator";
 import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 
+import { getCharactersFromImage } from "./../../utils";
+getCharactersFromImage();
+
 const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
 
 function PuzzleWrapper() {
