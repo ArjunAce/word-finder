@@ -10,4 +10,8 @@
   box-shadow: inset -2px 0px 0px rgba(38, 38, 38, 0.5), inset -1px 0px 0px #0a0a0a, inset 1px 1px 0px #ffffff,
     inset 2px 2px 0px #dfdfdf;
   padding: 6px;
+
+  &:last-child {
+    padding: 6px 10px;
+  }
 }
