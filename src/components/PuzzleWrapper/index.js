@@ -5,7 +5,10 @@ import Separator from "components/Separator";
 import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 
+const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
+
 function PuzzleWrapper() {
+
     return (
         <div className={styles['puzzle-wrapper']}>
             <div className={styles['main-section']}>
@@ -16,7 +19,7 @@ function PuzzleWrapper() {
                     <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
-                    <Puzzle />
+                    <Puzzle words={words1} />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
