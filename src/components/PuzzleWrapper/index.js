@@ -3,6 +3,7 @@ import styles from "./styles.module.scss"
 import Button from "components/Button";
 import Separator from "components/Separator";
 import WordsContainer from "components/WordsContainer";
+import Puzzle from "components/Puzzle";
 
 function PuzzleWrapper() {
     return (
@@ -15,6 +16,7 @@ function PuzzleWrapper() {
                     <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
+                    <Puzzle />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
