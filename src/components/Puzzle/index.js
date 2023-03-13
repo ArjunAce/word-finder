@@ -11,9 +11,9 @@ function Puzzle({
         <div className={styles['puzzle']}>
             {cells.map(
                 (rows, i) => {
-                    const row = rows.map((c, j) => <Cell letter={c} key={i + "" + j} />)
+                    const row = rows.map((c, j) => <Cell key={i + "" + j} letter={c} />)
                     return (
-                        <div className={styles['row']}>
+                        <div key={i} className={styles['row']}>
                             {row}
                         </div>)
                 }
