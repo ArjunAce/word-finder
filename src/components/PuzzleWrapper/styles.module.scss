@@ -32,8 +32,12 @@
 
   .footer {
     width: 160px;
+    font-family: "Abhaya Libre";
+    font-size: 12px;
+    line-height: 20px;
     background: #c0c0c0;
     box-shadow: inset -1px -1px 0px #dfdfdf, inset 1px 1px 0px #808080;
+    padding: 0 5px;
 
     &:nth-child(2) {
       width: calc(100% - 160px - 110px);

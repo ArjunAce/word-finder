@@ -18,8 +18,8 @@ function PuzzleWrapper() {
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
-                <div className={styles['footer']}></div>
-                <div className={styles['footer']}></div>
+                <div className={styles['footer']}>Loading complete</div>
+                <div className={styles['footer']}>Press F1 for help</div>
                 <div className={styles['footer']}></div>
             </div>
         </div>
