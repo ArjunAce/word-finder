@@ -17,7 +17,7 @@ export const getCharactersFromImage = async (image) => {
 
 export const convertWordsTo2DArray = (words) => {
     // Remove white spaces from the input string
-    const sanitizedString = words.toUpperCase().replace(/[^\S\n]/g, '+');
+    const sanitizedString = words.toUpperCase().replace(/[^\S\n]/g, '');
     if (!sanitizedString) {
         console.log("Invalid string", sanitizedString);
         return [];

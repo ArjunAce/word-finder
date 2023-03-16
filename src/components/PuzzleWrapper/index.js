@@ -6,21 +6,20 @@ import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 import ImageUploadButton from "components/ImageUploadButton";
 
-const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
-
+const words1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
 function PuzzleWrapper() {
-    const [words, setWords] = useState(words1.map(x => x.split("")));
+    const [puzzle, setPuzzle] = useState(words1.map(x => x.split("")));
 
     const updateLetter = (newLetter, i, j) => {
-        const wordsCopy = JSON.parse(JSON.stringify(words));
-        wordsCopy[i][j] = newLetter;
-        setWords(wordsCopy);
+        const puzzleCopy = JSON.parse(JSON.stringify(puzzle));
+        puzzleCopy[i][j] = newLetter;
+        setPuzzle(puzzleCopy);
     };
 
     const removeLetter = (i, j) => {
-        const wordsCopy = JSON.parse(JSON.stringify(words));
-        wordsCopy[i].splice(j, 1);
-        setWords(wordsCopy);
+        const puzzleCopy = JSON.parse(JSON.stringify(puzzle));
+        puzzleCopy[i].splice(j, 1);
+        setPuzzle(puzzleCopy);
     };
 
     return (
@@ -28,13 +27,13 @@ function PuzzleWrapper() {
             <div className={styles['main-section']}>
                 <div className={styles['left-section']}>
                     {/* <Button label="Upload puzzle" /> */}
-                    <ImageUploadButton setWords={setWords} />
+                    <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} />
                     <Separator />
                     <Button label="Upload words" />
                     <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
-                    <Puzzle words={words} updateLetter={updateLetter} removeLetter={removeLetter} />
+                    <Puzzle puzzle={puzzle} updateLetter={updateLetter} removeLetter={removeLetter} />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>

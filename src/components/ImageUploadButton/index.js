@@ -3,17 +3,17 @@ import Button from "components/Button";
 import { getCharactersFromImage, convertWordsTo2DArray } from "./../../utils";
 
 
-function ImageUploadButton({ setWords }) {
+function ImageUploadButton({ label, onUpload }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   React.useEffect(() => {
     if (selectedFile) {
       const callOCR = async () => {
         const data = await getCharactersFromImage(selectedFile);
-        console.log("Extracted words:", data);
+        console.log("Extracted puzzle:", data);
         const words2DArray = convertWordsTo2DArray(data);
-        console.log("Words as 2D array", words2DArray);
-        setWords(words2DArray);
+        console.log("Puzzle as 2D array", words2DArray);
+        onUpload(words2DArray);
       }
       callOCR();
     };
@@ -33,7 +33,7 @@ function ImageUploadButton({ setWords }) {
 
   return (
     <div>
-      <Button label="Upload puzzle" onClick={handleUploadButtonClick} />
+      <Button label={label} onClick={handleUploadButtonClick} />
       {selectedFile && (
         <p>
           Selected file: {selectedFile.name} ({selectedFile.type})

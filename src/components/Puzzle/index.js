@@ -3,7 +3,7 @@ import React from 'react'
 import styles from "./styles.module.scss"
 import Cell from "components/Cell";
 
-function Puzzle({ words: cells, updateLetter, removeLetter }) {
+function Puzzle({ puzzle: cells, updateLetter, removeLetter }) {
     return (
         <div className={styles['puzzle']}>
             {cells.map(
