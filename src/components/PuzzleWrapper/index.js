@@ -18,8 +18,9 @@ function PuzzleWrapper() {
     };
 
     const removeLetter = (i, j) => {
-        console.log(i, j);
-        return;
+        const wordsCopy = JSON.parse(JSON.stringify(words));
+        wordsCopy[i].splice(j, 1);
+        setWords(wordsCopy);
     };
 
     return (
