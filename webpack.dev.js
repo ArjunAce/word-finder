@@ -8,6 +8,7 @@ module.exports = merge(commonConfig, {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
+    devtool: "source-map",
     module: {
         rules: [
             {
