@@ -31,15 +31,7 @@ function ImageUploadButton({ label, onUpload }) {
     input.click();
   };
 
-  return (
-    <div>
-      <Button label={label} onClick={handleUploadButtonClick} />
-      {selectedFile && (
-        <p>
-          Selected file: {selectedFile.name} ({selectedFile.type})
-        </p>
-      )}
-    </div>
+  return (<Button label={label} onClick={handleUploadButtonClick} />
   );
 }
 

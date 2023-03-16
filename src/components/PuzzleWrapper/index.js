@@ -29,7 +29,6 @@ function PuzzleWrapper() {
         <div className={styles['puzzle-wrapper']}>
             <div className={styles['main-section']}>
                 <div className={styles['left-section']}>
-                    {/* <Button label="Upload puzzle" /> */}
                     <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} />
                     <Separator />
                     <ImageUploadButton label="Upload words" onUpload={setWords} />
