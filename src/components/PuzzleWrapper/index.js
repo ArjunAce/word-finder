@@ -10,10 +10,16 @@ const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg',
 
 function PuzzleWrapper() {
     const [words, setWords] = useState(words1.map(x => x.split("")));
+
     const updateLetter = (newLetter, i, j) => {
         const wordsCopy = JSON.parse(JSON.stringify(words));
         wordsCopy[i][j] = newLetter;
         setWords(wordsCopy);
+    };
+
+    const removeLetter = (i, j) => {
+        console.log(i, j);
+        return;
     };
 
     return (
@@ -27,7 +33,7 @@ function PuzzleWrapper() {
                     <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
-                    <Puzzle words={words} updateLetter={updateLetter} />
+                    <Puzzle words={words} updateLetter={updateLetter} removeLetter={removeLetter} />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
