@@ -1,7 +1,10 @@
 import { createWorker } from 'tesseract.js';
-import image from "./image.png";
 
-export const getCharactersFromImage = async (imgUrl) => {
+export const getCharactersFromImage = async (image) => {
+    if (!image) {
+        console.log("tesseract error: invalid file", image);
+        return;
+    }
     const worker = await createWorker({
         logger: m => console.log(m)
     });

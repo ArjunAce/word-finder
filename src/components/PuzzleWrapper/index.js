@@ -4,9 +4,7 @@ import Button from "components/Button";
 import Separator from "components/Separator";
 import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
-
-import { getCharactersFromImage } from "./../../utils";
-getCharactersFromImage();
+import ImageUploadButton from "components/ImageUploadButton";
 
 const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
 
@@ -16,7 +14,8 @@ function PuzzleWrapper() {
         <div className={styles['puzzle-wrapper']}>
             <div className={styles['main-section']}>
                 <div className={styles['left-section']}>
-                    <Button label="Upload puzzle" />
+                    {/* <Button label="Upload puzzle" /> */}
+                    <ImageUploadButton />
                     <Separator />
                     <Button label="Upload words" />
                     <WordsContainer />
