@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 import cell from "assets/images/cell.png";
 import React, { useState } from 'react';
 
-const Cell = ({ letter }) => {
+const Cell = ({ letter, updateLetter, row, col }) => {
     const [editable, setEditable] = useState(false);
     const [currentLetter, setCurrentLetter] = useState(letter);
     const [tempValue, setTempValue] = useState('');
@@ -14,7 +14,7 @@ const Cell = ({ letter }) => {
     };
 
     const handleChange = (event) => {
-        setCurrentLetter(event.target.value.toUpperCase());
+        updateLetter(event.target.value.toUpperCase(), row, col);
         setEditable(false);
     };
 

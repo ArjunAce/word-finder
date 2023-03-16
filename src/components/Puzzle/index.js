@@ -3,12 +3,12 @@ import React from 'react'
 import styles from "./styles.module.scss"
 import Cell from "components/Cell";
 
-function Puzzle({ words: cells }) {
+function Puzzle({ words: cells, updateLetter }) {
     return (
         <div className={styles['puzzle']}>
             {cells.map(
                 (rows, i) => {
-                    const row = rows.map((c, j) => <Cell key={i + "" + j} letter={c} />)
+                    const row = rows.map((c, j) => <Cell key={i + "" + j + c} row={i} col={j} letter={c} updateLetter={updateLetter} />)
                     return (
                         <div key={i} className={styles['row']}>
                             {row}

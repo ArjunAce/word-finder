@@ -6,10 +6,15 @@ import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 import ImageUploadButton from "components/ImageUploadButton";
 
-// const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
+const words1 = ['qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqweqwc', 'qfqnwqfqf', 'adqqwdkfg', 'qweqwecwc'];
 
 function PuzzleWrapper() {
-    const [words, setWords] = useState([]);
+    const [words, setWords] = useState(words1.map(x => x.split("")));
+    const updateLetter = (newLetter, i, j) => {
+        const wordsCopy = JSON.parse(JSON.stringify(words));
+        wordsCopy[i][j] = newLetter;
+        setWords(wordsCopy);
+    };
 
     return (
         <div className={styles['puzzle-wrapper']}>
@@ -22,7 +27,7 @@ function PuzzleWrapper() {
                     <WordsContainer />
                 </div>
                 <div className={styles['right-section']}>
-                    <Puzzle words={words} />
+                    <Puzzle words={words} updateLetter={updateLetter} />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
