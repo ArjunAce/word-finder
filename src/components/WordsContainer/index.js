@@ -3,9 +3,7 @@ import styles from "./styles.module.scss"
 import scroll from "assets/images/scroll.png";
 import scrollBottom from "assets/images/scroll-bottom.png";
 
-const words = ['soft', 'monster', 'drummer', 'flying', 'space', 'paint', 'road', 'jam', 'website'];
-
-function WordsContainer() {
+function WordsContainer({ words }) {
     return (
         <div className={styles['words-container']}>
             <div className={styles['title']}>Words to search</div>

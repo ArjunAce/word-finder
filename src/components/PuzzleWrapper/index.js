@@ -6,9 +6,12 @@ import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 import ImageUploadButton from "components/ImageUploadButton";
 
-const words1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
+const puzzle1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
+const words1 = ["CAPTAIN AMERICA", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "CHITAURI", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
+
 function PuzzleWrapper() {
-    const [puzzle, setPuzzle] = useState(words1.map(x => x.split("")));
+    const [puzzle, setPuzzle] = useState(puzzle1.map(x => x.split("")));
+    const [words, setWords] = useState(words1);
 
     const updateLetter = (newLetter, i, j) => {
         const puzzleCopy = JSON.parse(JSON.stringify(puzzle));
@@ -29,8 +32,8 @@ function PuzzleWrapper() {
                     {/* <Button label="Upload puzzle" /> */}
                     <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} />
                     <Separator />
-                    <Button label="Upload words" />
-                    <WordsContainer />
+                    <ImageUploadButton label="Upload words" onUpload={setWords} />
+                    <WordsContainer words={words} />
                 </div>
                 <div className={styles['right-section']}>
                     <Puzzle puzzle={puzzle} updateLetter={updateLetter} removeLetter={removeLetter} />
