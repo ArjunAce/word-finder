@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import Button from "components/Button";
-import { getCharactersFromImage } from "./../../utils";
+import { getCharactersFromImage, convertWordsTo2DArray } from "./../../utils";
 
 
-function ImageUploadButton() {
+function ImageUploadButton({ setWords }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   React.useEffect(() => {
     if (selectedFile) {
-      getCharactersFromImage(selectedFile);
-    }
+      const callOCR = async () => {
+        const data = await getCharactersFromImage(selectedFile);
+        console.log("Extracted words:", data);
+        const words2DArray = convertWordsTo2DArray(data);
+        console.log("Words as 2D array", words2DArray);
+        setWords(words2DArray);
+      }
+      callOCR();
+    };
   }, [selectedFile])
 
   const handleFileSelect = (event) => {

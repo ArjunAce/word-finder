@@ -3,10 +3,7 @@ import React from 'react'
 import styles from "./styles.module.scss"
 import Cell from "components/Cell";
 
-function Puzzle({
-    words = words1
-}) {
-    const cells = words.map(x => x.split(""));
+function Puzzle({ words: cells }) {
     return (
         <div className={styles['puzzle']}>
             {cells.map(
