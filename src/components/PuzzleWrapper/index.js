@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./styles.module.scss"
-import Button from "components/Button";
 import Separator from "components/Separator";
 import WordsContainer from "components/WordsContainer";
 import Puzzle from "components/Puzzle";
 import ImageUploadButton from "components/ImageUploadButton";
+import { findWordsInPuzzle } from './../../utils/findWords';
 
 const puzzle1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
 const words1 = ["CAPTAIN AMERICA", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "CHITAURI", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
@@ -12,6 +12,13 @@ const words1 = ["CAPTAIN AMERICA", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", 
 function PuzzleWrapper() {
     const [puzzle, setPuzzle] = useState(puzzle1.map(x => x.split("")));
     const [words, setWords] = useState(words1);
+
+    useEffect(() => {
+        if (puzzle.length && words.length) {
+            const solution = findWordsInPuzzle(puzzle, words);
+            console.log(solution);
+        }
+    }, [puzzle, words]);
 
     const updateLetter = (newLetter, i, j) => {
         const puzzleCopy = JSON.parse(JSON.stringify(puzzle));

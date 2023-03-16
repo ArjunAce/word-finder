@@ -6,7 +6,7 @@ export const getCharactersFromImage = async (image) => {
         return;
     }
     const worker = await createWorker({
-        logger: m => console.log(m)
+        // logger: m => console.log(m)
     });
     await worker.loadLanguage('eng');
     await worker.initialize('eng');
