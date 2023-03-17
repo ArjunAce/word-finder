@@ -40,9 +40,9 @@ function PuzzleWrapper() {
         <div className={styles['puzzle-wrapper']}>
             <div className={styles['main-section']}>
                 <div className={styles['left-section']}>
-                    <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} splitLetters />
+                    <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} splitLetters removeSpaces />
                     <Separator />
-                    <ImageUploadButton label="Upload words" onUpload={setWords} splitLetters={false} />
+                    <ImageUploadButton label="Upload words" onUpload={setWords} splitLetters={false} removeSpaces ={false}/>
                     <WordsContainer words={words} solution={solution} />
                 </div>
                 <div className={styles['right-section']}>

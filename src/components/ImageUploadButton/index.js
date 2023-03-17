@@ -3,14 +3,14 @@ import Button from "components/Button";
 import { getCharactersFromImage, convertTextToArray } from "./../../utils";
 
 
-function ImageUploadButton({ label, onUpload, splitLetters }) {
+function ImageUploadButton({ label, onUpload, splitLetters, removeSpaces }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   React.useEffect(() => {
     if (selectedFile) {
       const callOCR = async () => {
-        const data = await getCharactersFromImage(selectedFile);
-        const words2DArray = convertTextToArray(data, splitLetters);
+        const text = await getCharactersFromImage(selectedFile);
+        const words2DArray = convertTextToArray({ text, splitLetters, removeSpaces });
         onUpload(words2DArray);
       }
       callOCR();

@@ -15,16 +15,21 @@ export const getCharactersFromImage = async (image) => {
     return text;
 };
 
-export const convertTextToArray = (text, splitLetters) => {
-    // Remove white spaces from the input string
-    const sanitizedString = text.toUpperCase().replace(/[^\S\n]/g, '');
-    if (!sanitizedString) {
-        console.log("Invalid string", sanitizedString);
+export const convertTextToArray = ({ text, splitLetters, removeSpaces }) => {
+    text = text.toUpperCase();
+    if (removeSpaces) {
+        text = text.replace(/[^\S\n]/g, '');
+    }
+
+    if (!text) {
+        console.log("Invalid string", text);
         return [];
     }
 
     // Split the string into an array of lines
-    const lines = sanitizedString.split('\n');
+    const lines = text.split('\n');
+    console.log("splitLetters", splitLetters);
+
     if (splitLetters) {
         // Convert each line into an array of characters
         const characters = lines.map(line => line.split(''));

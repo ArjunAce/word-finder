@@ -35,7 +35,7 @@ const Cell = ({ letter, updateLetter, row, col, removeLetter }) => {
                 setCurrentLetter(tempValue);
             }
             setEditable(false);
-        }, 100);
+        }, 200);
 
     };
 
