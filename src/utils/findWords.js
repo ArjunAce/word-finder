@@ -85,6 +85,7 @@ export const findWordsInPuzzle = (puzzleMatrix, wordsToFind) => {
 
     const findWordInPuzzle = (word) => {
         if (!word.length) return INVALID_SOLUTION;
+        word = word.toUpperCase().replace(/[^\S\n]/g, '');
 
         // Start from 0,0 to find the letter
         // If letter is found, but the word is not found in that occurrence,
