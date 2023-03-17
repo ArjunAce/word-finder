@@ -1,5 +1,5 @@
 const WORD_NOT_FOUND = [null, null];
-const INVALID_SOLUTION = [WORD_NOT_FOUND, WORD_NOT_FOUND];
+export const INVALID_SOLUTION = [WORD_NOT_FOUND, WORD_NOT_FOUND];
 
 const directions = [[0, -1], [0, 1], [-1, -1], [-1, 0], [-1, 1], [1, -1], [1, 0], [1, 1]];
 

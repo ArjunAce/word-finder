@@ -8,15 +8,17 @@ import { findWordsInPuzzle } from './../../utils/findWords';
 
 const puzzle1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
 const words1 = ["CAPTAIN AMERICA", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "CHITAURI", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
+const solution1 = [[[13, 3], [0, 3]], [[4, 5], [4, 12]], [[11, 11], [5, 11]], [[3, 7], [0, 7]], [[4, 13], [12, 13]], [[13, 6], [7, 6]], [[4, 4], [11, 4]], [[10, 1], [1, 1]], [[1, 0], [4, 0]], [[8, 8], [5, 8]], [[null, null], [null, null]], [[13, 7], [7, 7]]];
 
 function PuzzleWrapper() {
     const [puzzle, setPuzzle] = useState(puzzle1.map(x => x.split("")));
     const [words, setWords] = useState(words1);
+    const [solution, setSolution] = useState(solution1);
 
     useEffect(() => {
         if (puzzle.length && words.length) {
             const solution = findWordsInPuzzle(puzzle, words);
-            console.log(solution);
+            setSolution(solution);
         }
     }, [puzzle, words]);
 
@@ -42,7 +44,7 @@ function PuzzleWrapper() {
                     <WordsContainer words={words} />
                 </div>
                 <div className={styles['right-section']}>
-                    <Puzzle puzzle={puzzle} updateLetter={updateLetter} removeLetter={removeLetter} />
+                    <Puzzle puzzle={puzzle} updateLetter={updateLetter} removeLetter={removeLetter} solution={solution} />
                 </div>
             </div>
             <div className={styles['footer-wrapper']}>
