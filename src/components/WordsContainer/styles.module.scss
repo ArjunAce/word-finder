@@ -17,6 +17,10 @@
     font-size: 11px;
     line-height: 11px;
     margin-bottom: 5px;
+
+    &.not-found {
+      text-decoration: line-through;
+    }
   }
 
   .scroll-wrapper {

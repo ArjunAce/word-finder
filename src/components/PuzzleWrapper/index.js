@@ -41,7 +41,7 @@ function PuzzleWrapper() {
                     <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} />
                     <Separator />
                     <ImageUploadButton label="Upload words" onUpload={setWords} />
-                    <WordsContainer words={words} />
+                    <WordsContainer words={words} solution={solution} />
                 </div>
                 <div className={styles['right-section']}>
                     <Puzzle puzzle={puzzle} updateLetter={updateLetter} removeLetter={removeLetter} solution={solution} />
