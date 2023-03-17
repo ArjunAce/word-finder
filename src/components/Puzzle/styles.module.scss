@@ -1,3 +1,7 @@
-.puzzle .row {
-  display: flex;
+.puzzle {
+  position: relative;
+
+  .row {
+    display: flex;
+  }
 }

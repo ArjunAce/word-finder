@@ -31,3 +31,16 @@ export const convertWordsTo2DArray = (words) => {
 
     return characters;
 }
+
+export const getLineCoords = ([point1, point2]) => {
+    const blockSize = 50;
+    const coords1 = {
+        x: point1[1] * blockSize + blockSize / 2,
+        y: point1[0] * blockSize + blockSize / 2,
+    };
+    const coords2 = {
+        x: point2[1] * blockSize + blockSize / 2,
+        y: point2[0] * blockSize + blockSize / 2,
+    };
+    return { coords1, coords2 };
+};
