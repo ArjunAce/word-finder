@@ -15,9 +15,9 @@ export const getCharactersFromImage = async (image) => {
     return text;
 };
 
-export const convertWordsTo2DArray = (words) => {
+export const convertTextToArray = (text, splitLetters) => {
     // Remove white spaces from the input string
-    const sanitizedString = words.toUpperCase().replace(/[^\S\n]/g, '');
+    const sanitizedString = text.toUpperCase().replace(/[^\S\n]/g, '');
     if (!sanitizedString) {
         console.log("Invalid string", sanitizedString);
         return [];
@@ -25,11 +25,12 @@ export const convertWordsTo2DArray = (words) => {
 
     // Split the string into an array of lines
     const lines = sanitizedString.split('\n');
-
-    // Convert each line into an array of characters
-    const characters = lines.map(line => line.split(''));
-
-    return characters;
+    if (splitLetters) {
+        // Convert each line into an array of characters
+        const characters = lines.map(line => line.split(''));
+        return characters;
+    }
+    return lines;
 }
 
 export const getLineCoords = ([point1, point2]) => {
