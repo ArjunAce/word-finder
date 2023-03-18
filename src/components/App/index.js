@@ -5,6 +5,7 @@ import Separator from 'components/Separator';
 import TabsWrapper from 'components/TabsWrapper';
 import PuzzleWrapper from 'components/PuzzleWrapper';
 import styles from "./styles.module.scss"
+import menuBar from "assets/images/menu-bar.jpg";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                         <PuzzleWrapper />
                     </div>
                 </div>
+                <img src={menuBar} alt='menu bar' />
             </div>
         </React.Fragment>
     );
