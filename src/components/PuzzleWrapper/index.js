@@ -9,9 +9,9 @@ import { findWordsInPuzzle } from './../../utils/findWords';
 let puzzle1 = ["TOAHNLKRHMNE", "HWCHALLWSAYT", "OOICUPEOKEOC", "RDOHKAVWKCTA", "TINRSHRWAIMR", "EWIITHANOSNE", "RKAICHMKAEAS", "ACTGAKEOWEMS", "KAPORRFYIENE", "ALACOOOUATOT", "LBCRIRKORCRN", "AAPIKWGCTYIY"];
 let words1 = ["CAPTAIN", "GROOT", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "THANOS", "MARVEL", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
 let solution1 = [[[10, 2], [4, 2]], [[11, 6], [7, 2]], [[null, null], [null, null]], [[11, 10], [5, 10]], [[3, 3], [0, 6]], [[9, 11], [1, 11]], [[5, 10], [11, 4]], [[5, 4], [5, 9]], [[6, 6], [1, 6]], [[10, 1], [1, 1]], [[0, 0], [3, 0]], [[1, 6], [4, 9]], [[4, 2], [11, 9]], [[6, 5], [0, 11]]];
-// puzzle1 = [];
-// words1 = [];
-// solution1 = [];
+puzzle1 = [];
+words1 = [];
+solution1 = [];
 function PuzzleWrapper() {
     const [puzzle, setPuzzle] = useState(puzzle1.map(x => x.split("")));
     const [words, setWords] = useState(words1);
