@@ -25,6 +25,7 @@ module.exports = merge(commonConfig, {
                             },
                         }
                     },
+                    'resolve-url-loader',
                     'sass-loader' // 1. Turns scss to css
                 ]
             }
