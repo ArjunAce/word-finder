@@ -6,9 +6,9 @@ import Puzzle from "components/Puzzle";
 import ImageUploadButton from "components/ImageUploadButton";
 import { findWordsInPuzzle } from './../../utils/findWords';
 
-let puzzle1 = ['OOKAHNLKRHMNIE', 'TWNCHAALWLAROS', 'HOIICPPUAEWOKL', 'ODCRAKAHKIHTUY', 'RIKECSHAWARMAT', 'IWFMHCHYIITNTE', 'RKUAIRKLKAMALS', 'ACRNTAKEOUEMHS', 'KAYIARRYLIENAE', 'ALMAUWOENATOOR', 'LBRTRIYKKHCRNA', 'AAKPITWWCSTIYC', 'ATKAOREARWWMRT', 'TNICYRNHIOORUO'];
-let words1 = ["CAPTAIN AMERICA", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "CHITAURI", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
-let solution1 = [[[13, 3], [0, 3]], [[4, 5], [4, 12]], [[11, 11], [5, 11]], [[3, 7], [0, 7]], [[4, 13], [12, 13]], [[13, 6], [7, 6]], [[4, 4], [11, 4]], [[10, 1], [1, 1]], [[1, 0], [4, 0]], [[8, 8], [5, 8]], [[null, null], [null, null]], [[13, 7], [7, 7]]];
+let puzzle1 = ["TOAHNLKRHMNE", "HWCHALLWSAYT", "OOICUPEOKEOC", "RDOHKAVWKCTA", "TINRSHRWAIMR", "EWIITHANOSNE", "RKAICHMKAEAS", "ACTGAKEOWEMS", "KAPORRFYIENE", "ALACOOOUATOT", "LBCRIRKORCRN", "AAPIKWGCTYIY"];
+let words1 = ["CAPTAIN", "GROOT", "SHAWARMA", "IRON MAN", "HULK", "TESSERACT", "NEW YORK", "THANOS", "MARVEL", "BLACK WIDOW", "THOR", "LOKI", "NICK FURY", "HAWKEYE"];
+let solution1 = [[[10, 2], [4, 2]], [[11, 6], [7, 2]], [[null, null], [null, null]], [[11, 10], [5, 10]], [[3, 3], [0, 6]], [[9, 11], [1, 11]], [[5, 10], [11, 4]], [[5, 4], [5, 9]], [[6, 6], [1, 6]], [[10, 1], [1, 1]], [[0, 0], [3, 0]], [[1, 6], [4, 9]], [[4, 2], [11, 9]], [[6, 5], [0, 11]]];
 // puzzle1 = [];
 // words1 = [];
 // solution1 = [];
@@ -42,7 +42,7 @@ function PuzzleWrapper() {
                 <div className={styles['left-section']}>
                     <ImageUploadButton label="Upload puzzle" onUpload={setPuzzle} splitLetters removeSpaces />
                     <Separator />
-                    <ImageUploadButton label="Upload words" onUpload={setWords} splitLetters={false} removeSpaces ={false}/>
+                    <ImageUploadButton label="Upload words" onUpload={setWords} splitLetters={false} removeSpaces={false} />
                     <WordsContainer words={words} solution={solution} />
                 </div>
                 <div className={styles['right-section']}>
