@@ -1,17 +1,20 @@
 .title-bar-container {
-  height: 22px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
   color: #ffffff;
-  font-size: 11px;
-  font-weight: 700;
   line-height: 12px;
-  box-shadow: inset -1px -1px 0px #0A0A0A, inset 1px 1px 0px #DFDFDF, inset -2px -2px 0px #808080, inset 2px 2px 0px #FFFFFF;
-  padding: 5px 4px;
+  box-shadow: inset -1px -1px 0px #0a0a0a, inset 1px 1px 0px #dfdfdf, inset -2px -2px 0px #808080,
+    inset 2px 2px 0px #ffffff;
+  padding: 6px;
   margin-bottom: 4px;
 
+  > div:first-child {
+    font-size: 14px;
+    font-weight: 700;
+  }
   .title-bar-controls {
     display: flex;
 
